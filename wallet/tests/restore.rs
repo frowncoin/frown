@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -21,10 +21,10 @@ use self::libwallet::slate::Slate;
 use self::wallet::libwallet;
 use self::wallet::libwallet::types::AcctPathMapping;
 use self::wallet::test_framework::{self, LocalWalletClient, WalletProxy};
-use grin_core as core;
-use grin_keychain as keychain;
-use grin_util as util;
-use grin_wallet as wallet;
+use frown_core as core;
+use frown_keychain as keychain;
+use frown_util as util;
+use frown_wallet as wallet;
 use std::fs;
 use std::sync::atomic::Ordering;
 use std::thread;

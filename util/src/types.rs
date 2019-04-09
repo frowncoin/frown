@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -62,7 +62,7 @@ impl Default for LoggingConfig {
 			stdout_log_level: LogLevel::Warning,
 			log_to_file: true,
 			file_log_level: LogLevel::Info,
-			log_file_path: String::from("grin.log"),
+			log_file_path: String::from("frown.log"),
 			log_file_append: true,
 			log_max_size: Some(1024 * 1024 * 16), // 16 megabytes default
 			log_max_files: Some(DEFAULT_ROTATE_LOG_FILES),

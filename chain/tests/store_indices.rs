@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,10 +20,10 @@ use self::core::libtx;
 use self::core::pow::{self, Difficulty};
 use self::keychain::{ExtKeychain, ExtKeychainPath, Keychain};
 use env_logger;
-use grin_chain as chain;
-use grin_core as core;
-use grin_keychain as keychain;
-use grin_store as store;
+use frown_chain as chain;
+use frown_core as core;
+use frown_keychain as keychain;
+use frown_store as store;
 use std::fs;
 use std::sync::Arc;
 
@@ -48,7 +48,7 @@ fn test_various_store_indices() {
 		Ok(_) => println!("Initializing env logger"),
 		Err(e) => println!("env logger already initialized: {:?}", e),
 	};
-	let chain_dir = ".grin_idx_1";
+	let chain_dir = ".frown_idx_1";
 	clean_output_dir(chain_dir);
 
 	let keychain = ExtKeychain::from_random_seed(false).unwrap();

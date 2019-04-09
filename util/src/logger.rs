@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -56,15 +56,15 @@ lazy_static! {
 
 const LOGGING_PATTERN: &str = "{d(%Y%m%d %H:%M:%S%.3f)} {h({l})} {M} - {m}{n}";
 
-/// This filter is rejecting messages that doesn't start with "grin"
-/// in order to save log space for only Grin-related records
+/// This filter is rejecting messages that doesn't start with "frown"
+/// in order to save log space for only Frown-related records
 #[derive(Debug)]
-struct GrinFilter;
+struct FrownFilter;
 
-impl Filter for GrinFilter {
+impl Filter for FrownFilter {
 	fn filter(&self, record: &Record<'_>) -> Response {
 		if let Some(module_path) = record.module_path() {
-			if module_path.starts_with("grin") {
+			if module_path.starts_with("frown") {
 				return Response::Neutral;
 			}
 		}
@@ -111,7 +111,7 @@ pub fn init_logger(config: Option<LoggingConfig>) {
 			appenders.push(
 				Appender::builder()
 					.filter(filter)
-					.filter(Box::new(GrinFilter))
+					.filter(Box::new(FrownFilter))
 					.build("stdout", Box::new(stdout)),
 			);
 
@@ -155,7 +155,7 @@ pub fn init_logger(config: Option<LoggingConfig>) {
 			appenders.push(
 				Appender::builder()
 					.filter(filter)
-					.filter(Box::new(GrinFilter))
+					.filter(Box::new(FrownFilter))
 					.build("file", file),
 			);
 			root = root.appender("file");
@@ -212,7 +212,7 @@ pub fn init_test_logger() {
 		appenders.push(
 			Appender::builder()
 				.filter(filter)
-				.filter(Box::new(GrinFilter))
+				.filter(Box::new(FrownFilter))
 				.build("stdout", Box::new(stdout)),
 		);
 

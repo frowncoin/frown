@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ use self::pool_api::PoolPushHandler;
 use self::server_api::IndexHandler;
 use self::server_api::StatusHandler;
 use self::transactions_api::TxHashSetHandler;
-use crate::auth::{BasicAuthMiddleware, GRIN_BASIC_REALM};
+use crate::auth::{BasicAuthMiddleware, FROWN_BASIC_REALM};
 use crate::chain;
 use crate::p2p;
 use crate::pool;
@@ -64,9 +64,9 @@ pub fn start_rest_apis(
 	let mut apis = ApiServer::new();
 	let mut router = build_router(chain, tx_pool, peers).expect("unable to build API router");
 	if let Some(api_secret) = api_secret {
-		let api_basic_auth = format!("Basic {}", util::to_base64(&format!("grin:{}", api_secret)));
+		let api_basic_auth = format!("Basic {}", util::to_base64(&format!("frown:{}", api_secret)));
 		let basic_auth_middleware =
-			Arc::new(BasicAuthMiddleware::new(api_basic_auth, &GRIN_BASIC_REALM));
+			Arc::new(BasicAuthMiddleware::new(api_basic_auth, &FROWN_BASIC_REALM));
 		router.add_middleware(basic_auth_middleware);
 	}
 

@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-use grin_core as core;
-use grin_p2p as p2p;
+use frown_core as core;
+use frown_p2p as p2p;
 
-use grin_store as store;
-use grin_util as util;
-use grin_util::{Mutex, StopState};
+use frown_store as store;
+use frown_util as util;
+use frown_util::{Mutex, StopState};
 
 use std::net::{SocketAddr, TcpListener, TcpStream};
 use std::sync::Arc;
@@ -50,7 +50,7 @@ fn peer_handshake() {
 		..p2p::P2PConfig::default()
 	};
 	let net_adapter = Arc::new(p2p::DummyAdapter {});
-	let db_env = Arc::new(store::new_env(".grin".to_string()));
+	let db_env = Arc::new(store::new_env(".frown".to_string()));
 	let server = Arc::new(
 		p2p::Server::new(
 			db_env,

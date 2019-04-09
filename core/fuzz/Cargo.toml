@@ -1,16 +1,16 @@
 [package]
-name = "grin_core-fuzz"
+name = "frown_core-fuzz"
 version = "0.0.3"
-authors = ["Grin Developers <mimblewimble@lists.launchpad.net>"]
+authors = ["Frown Developers <mimblewimble@lists.launchpad.net>"]
 publish = false
 
 [package.metadata]
 cargo-fuzz = true
 
 [dependencies]
-grin_core = { path = ".."}
-grin_keychain = { path = "../../keychain"}
-grin_wallet = { path = "../../wallet"}
+frown_core = { path = ".."}
+frown_keychain = { path = "../../keychain"}
+frown_wallet = { path = "../../wallet"}
 [dependencies.libfuzzer-sys]
 git = "https://github.com/rust-fuzz/libfuzzer-sys.git"
 

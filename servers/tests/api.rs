@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,10 +20,10 @@ mod framework;
 use self::core::global::{self, ChainTypes};
 use self::util::{init_test_logger, to_hex, Mutex};
 use crate::framework::{LocalServerContainer, LocalServerContainerConfig};
-use grin_api as api;
-use grin_core as core;
-use grin_p2p as p2p;
-use grin_util as util;
+use frown_api as api;
+use frown_core as core;
+use frown_p2p as p2p;
+use frown_util as util;
 use std::sync::Arc;
 use std::{thread, time};
 

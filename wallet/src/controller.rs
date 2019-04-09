@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 //! Still experimental
 use crate::adapters::{FileWalletCommAdapter, HTTPWalletCommAdapter, KeybaseWalletCommAdapter};
 use crate::api::{
-	ApiServer, BasicAuthMiddleware, Handler, ResponseFuture, Router, TLSConfig, GRIN_BASIC_REALM,
+	ApiServer, BasicAuthMiddleware, Handler, ResponseFuture, Router, TLSConfig, FROWN_BASIC_REALM,
 };
 use crate::core::core;
 use crate::core::core::Transaction;
@@ -90,9 +90,9 @@ where
 	let mut router = Router::new();
 	if api_secret.is_some() {
 		let api_basic_auth =
-			"Basic ".to_string() + &to_base64(&("grin:".to_string() + &api_secret.unwrap()));
+			"Basic ".to_string() + &to_base64(&("frown:".to_string() + &api_secret.unwrap()));
 		let basic_auth_middleware =
-			Arc::new(BasicAuthMiddleware::new(api_basic_auth, &GRIN_BASIC_REALM));
+			Arc::new(BasicAuthMiddleware::new(api_basic_auth, &FROWN_BASIC_REALM));
 		router.add_middleware(basic_auth_middleware);
 	}
 	router
@@ -334,7 +334,7 @@ where
 			let (mut slate, lock_fn) = match result {
 				Ok(s) => {
 					info!(
-						"Tx created: {} grin to {} (strategy '{}')",
+						"Tx created: {} frown to {} (strategy '{}')",
 						core::amount_to_hr_string(args.amount, false),
 						&args.dest,
 						args.selection_strategy_is_use_all,

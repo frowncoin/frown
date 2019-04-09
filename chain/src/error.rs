@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ use crate::keychain;
 use crate::util::secp;
 use crate::util::secp::pedersen::Commitment;
 use failure::{Backtrace, Context, Fail};
-use grin_store as store;
+use frown_store as store;
 use std::fmt::{self, Display};
 use std::io;
 
@@ -134,8 +134,8 @@ pub enum ErrorKind {
 	/// Error from summing and verifying kernel sums via committed trait.
 	#[fail(display = "Committed Trait: Error summing and verifying kernel sums")]
 	Committed(committed::Error),
-	/// We cannot process data once the Grin server has been stopped.
-	#[fail(display = "Stopped (Grin Shutting Down)")]
+	/// We cannot process data once the Frown server has been stopped.
+	#[fail(display = "Stopped (Frown Shutting Down)")]
 	Stopped,
 	/// Internal Roaring Bitmap error
 	#[fail(display = "Roaring Bitmap error")]

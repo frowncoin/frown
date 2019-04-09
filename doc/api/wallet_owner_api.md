@@ -108,7 +108,7 @@ Attempt to update and retrieve outputs.
 * **Success Response:**
 
   * **Code:** 200
-  * **Content:** All listed amounts in nanogrin. Array of
+  * **Content:** All listed amounts in nanofrown. Array of
 
     | Field                             | Type     | Description                             |
     |:----------------------------------|:---------|:----------------------------------------|
@@ -341,7 +341,7 @@ Send a transaction either directly by http or file (then display the slate)
 
     | Field                         | Type     | Description                          |
     |:------------------------------|:---------|:-------------------------------------|
-    | amount                        | number   | Amount to send (in nanogrin)         |
+    | amount                        | number   | Amount to send (in nanofrown)         |
     | minimum_confirmations         | number   | Minimum confirmations                |
     | method                        | string   | Payment method                       |
     | dest                          | string   | Destination url                      |
@@ -410,7 +410,7 @@ Send a transaction either directly by http or file (then display the slate)
 ### POST Finalize Tx
 
 Sender finalization of the transaction. Takes the slate returned by the sender as well as the private file generate on the first send step.
-Builds the complete transaction but will **not** sends it to a grin node for propagation. Use [POST Post Tx](#post-post-tx) for that.
+Builds the complete transaction but will **not** sends it to a frown node for propagation. Use [POST Post Tx](#post-post-tx) for that.
 
 * **URL**
 

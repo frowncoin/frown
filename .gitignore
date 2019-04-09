@@ -1,13 +1,13 @@
 *.swp
 .DS_Store
-.grin*
+.frown*
 node*
 !node_clients
 !node_clients.rs
 target
 */Cargo.lock
 *.iml
-grin.log
+frown.log
 wallet.seed
 test_output
 wallet_data

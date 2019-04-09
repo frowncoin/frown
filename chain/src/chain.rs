@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ use crate::types::{
 };
 use crate::util::secp::pedersen::{Commitment, RangeProof};
 use crate::util::{Mutex, RwLock, StopState};
-use grin_store::Error::NotFoundErr;
+use frown_store::Error::NotFoundErr;
 use std::collections::HashMap;
 use std::env;
 use std::fs::File;

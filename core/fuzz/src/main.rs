@@ -1,14 +1,14 @@
-extern crate grin_core;
-extern crate grin_keychain;
-extern crate grin_wallet;
+extern crate frown_core;
+extern crate frown_keychain;
+extern crate frown_wallet;
 
-use grin_core::core::target::Difficulty;
-use grin_core::core::{Block, BlockHeader, CompactBlock, Transaction};
-use grin_core::libtx::build::{input, output, transaction, with_fee};
-use grin_core::libtx::reward;
-use grin_core::ser;
-use grin_keychain::keychain::ExtKeychain;
-use grin_keychain::Keychain;
+use frown_core::core::target::Difficulty;
+use frown_core::core::{Block, BlockHeader, CompactBlock, Transaction};
+use frown_core::libtx::build::{input, output, transaction, with_fee};
+use frown_core::libtx::reward;
+use frown_core::ser;
+use frown_keychain::keychain::ExtKeychain;
+use frown_keychain::Keychain;
 use std::fs::{self, File};
 use std::path::Path;
 

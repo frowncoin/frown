@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// Grin server commands processing
+/// Frown server commands processing
 use std::process::exit;
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::Arc;
@@ -44,7 +44,7 @@ fn start_server_tui(config: servers::ServerConfig) {
 	// Run the UI controller.. here for now for simplicity to access
 	// everything it might need
 	if config.run_tui.unwrap_or(false) {
-		warn!("Starting GRIN in UI mode...");
+		warn!("Starting FROWN in UI mode...");
 		servers::Server::start(config, |serv: Arc<servers::Server>| {
 			let running = Arc::new(AtomicBool::new(true));
 			let _ = thread::Builder::new()
@@ -58,7 +58,7 @@ fn start_server_tui(config: servers::ServerConfig) {
 		})
 		.unwrap();
 	} else {
-		warn!("Starting GRIN w/o UI...");
+		warn!("Starting FROWN w/o UI...");
 		servers::Server::start(config, |serv: Arc<servers::Server>| {
 			let running = Arc::new(AtomicBool::new(true));
 			let r = running.clone();
@@ -77,8 +77,8 @@ fn start_server_tui(config: servers::ServerConfig) {
 }
 
 /// Handles the server part of the command line, mostly running, starting and
-/// stopping the Grin blockchain server. Processes all the command line
-/// arguments to build a proper configuration and runs Grin with that
+/// stopping the Frown blockchain server. Processes all the command line
+/// arguments to build a proper configuration and runs Frown with that
 /// configuration.
 pub fn server_command(
 	server_args: Option<&ArgMatches<'_>>,
@@ -131,12 +131,12 @@ pub fn server_command(
 				start_server(server_config);
 			}
 			("", _) => {
-				println!("Subcommand required, use 'grin help server' for details");
+				println!("Subcommand required, use 'frown help server' for details");
 			}
 			(cmd, _) => {
 				println!(":: {:?}", server_args);
 				panic!(
-					"Unknown server command '{}', use 'grin help server' for details",
+					"Unknown server command '{}', use 'frown help server' for details",
 					cmd
 				);
 			}

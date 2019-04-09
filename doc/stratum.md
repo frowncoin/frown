@@ -1,8 +1,8 @@
-# Grin Stratum RPC Protocol
+# Frown Stratum RPC Protocol
 
 *Read this in other languages: [Korean](stratum_KR.md).*
 
-This document describes the current Stratum RPC protocol implemented in Grin.
+This document describes the current Stratum RPC protocol implemented in Frown.
 
 ## Table of Contents
 
@@ -59,7 +59,7 @@ Example:
 {  
    "id":"10",
    "jsonrpc":"2.0",
-   "method":"getgrins",
+   "method":"getfrowns",
    "error":{  
       "code":-32601,
       "message":"Method not found"
@@ -225,7 +225,7 @@ Example:
 ***
 
 A message initiated by the miner.
-Miner can log in on a Grin Stratum server with a login, password and agent (usually statically set by the miner program).
+Miner can log in on a Frown Stratum server with a login, password and agent (usually statically set by the miner program).
 
 #### Request
 
@@ -247,7 +247,7 @@ Example:
    "params":{  
       "login":"login",
       "pass":"password",
-      "agent":"grin-miner"
+      "agent":"frown-miner"
    }
 }
 
@@ -510,7 +510,7 @@ Example:
 
 ## Error Messages
 
-Grin Stratum protocol implementation contains the following error message:
+Frown Stratum protocol implementation contains the following error message:
 
 | Error code  | Error Message                          |
 | :---------- | :------------------------------------- |
@@ -536,4 +536,4 @@ Miners SHOULD, MAY or MUST respect the following rules:
 
 ## Reference Implementation
 
-The current reference implementation is available at [mimblewimble/grin-miner](https://github.com/mimblewimble/grin-miner/blob/master/src/bin/client.rs).
+The current reference implementation is available at [mimblewimble/frown-miner](https://github.com/mimblewimble/frown-miner/blob/master/src/bin/client.rs).

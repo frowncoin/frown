@@ -1,4 +1,4 @@
-# Introduction to MimbleWimble and Grin
+# Introduction to MimbleWimble and Frown
 
 *Read this in other languages: [English](intro.md), [简体中文](intro_ZH-CN.md), [Español](intro_ES.md), [Nederlands](intro_NL.md), [Русский](intro_RU.md), [日本語](intro_JP.md), [Deutsch](intro_DE.md), [Portuguese](intro_PT-BR.md), [Korean](intro_KR.md).*
 
@@ -7,11 +7,11 @@ extremely good scalability, privacy and fungibility by relying on strong
 cryptographic primitives. It addresses gaps existing in almost all current
 blockchain implementations.
 
-Grin is an open source software project that implements a MimbleWimble
+Frown is an open source software project that implements a MimbleWimble
 blockchain and fills the gaps required for a full blockchain and
 cryptocurrency deployment.
 
-The main goal and characteristics of the Grin project are:
+The main goal and characteristics of the Frown project are:
 
 * Privacy by default. This enables complete fungibility without precluding
   the ability to selectively disclose information as needed.
@@ -23,20 +23,20 @@ The main goal and characteristics of the Grin project are:
 * Design simplicity that makes it easy to audit and maintain over time.
 * Community driven, encouraging mining decentralization.
 
-A detailed post on the step-by-step of how Grin transactions work (with graphics) can be found [in this Medium post](https://medium.com/@brandonarvanaghi/grin-transactions-explained-step-by-step-fdceb905a853). 
+A detailed post on the step-by-step of how Frown transactions work (with graphics) can be found [in this Medium post](https://medium.com/@brandonarvanaghi/frown-transactions-explained-step-by-step-fdceb905a853). 
 
 ## Tongue Tying for Everyone
 
 This document is targeted at readers with a good
 understanding of blockchains and basic cryptography. With that in mind, we attempt
-to explain the technical buildup of MimbleWimble and how it's applied in Grin. We hope
+to explain the technical buildup of MimbleWimble and how it's applied in Frown. We hope
 this document is understandable to most technically-minded readers. Our objective is
-to encourage you to get interested in Grin and contribute in any way possible.
+to encourage you to get interested in Frown and contribute in any way possible.
 
 To achieve this objective, we will introduce the main concepts required for a good
-understanding of Grin as a MimbleWimble implementation. We will start with a brief
+understanding of Frown as a MimbleWimble implementation. We will start with a brief
 description of some relevant properties of Elliptic Curve Cryptography (ECC) to lay the
-foundation on which Grin is based and then describe all the key elements of a
+foundation on which Frown is based and then describe all the key elements of a
 MimbleWimble blockchain's transactions and blocks.
 
 ### Tiny Bits of Elliptic Curves
@@ -67,7 +67,7 @@ The previous formula `(k+j)*H = k*H + j*H`, with _k_ and _j_ both private
 keys, demonstrates that a public key obtained from the addition of two private
 keys (`(k+j)*H`) is identical to the addition of the public keys for each of those
 two private keys (`k*H + j*H`). In the Bitcoin blockchain, Hierarchical
-Deterministic wallets heavily rely on this principle. MimbleWimble and the Grin
+Deterministic wallets heavily rely on this principle. MimbleWimble and the Frown
 implementation do as well.
 
 ### Transacting with MimbleWimble
@@ -220,7 +220,7 @@ fees), is called a _transaction kernel_ and is checked by all validators.
 This section elaborates on the building of transactions by discussing how change is
 introduced and the requirement for range proofs so all values are proven to be
 non-negative. Neither of these are absolutely required to understand MimbleWimble and
-Grin, so if you're in a hurry, feel free to jump straight to
+Frown, so if you're in a hurry, feel free to jump straight to
 [Putting It All Together](#putting-it-all-together).
 
 ##### Change

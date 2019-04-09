@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,12 +25,12 @@ use self::pool::types::*;
 use self::pool::TransactionPool;
 use self::util::secp::pedersen::Commitment;
 use self::util::RwLock;
-use grin_chain as chain;
-use grin_core as core;
-use grin_keychain as keychain;
-use grin_pool as pool;
-use grin_store as store;
-use grin_util as util;
+use frown_chain as chain;
+use frown_core as core;
+use frown_keychain as keychain;
+use frown_pool as pool;
+use frown_store as store;
+use frown_util as util;
 use std::collections::HashSet;
 use std::fs;
 use std::sync::Arc;

@@ -1,13 +1,13 @@
 [package]
-name = "grin"
+name = "frown"
 version = "1.0.3"
-authors = ["Grin Developers <mimblewimble@lists.launchpad.net>"]
+authors = ["Frown Developers <mimblewimble@lists.launchpad.net>"]
 description = "Simple, private and scalable cryptocurrency implementation based on the MimbleWimble chain format."
 license = "Apache-2.0"
-repository = "https://github.com/mimblewimble/grin"
-keywords = [ "crypto", "grin", "mimblewimble" ]
+repository = "https://github.com/mimblewimble/frown"
+keywords = [ "crypto", "frown", "mimblewimble" ]
 readme = "README.md"
-exclude = ["**/*.grin", "**/*.grin2"]
+exclude = ["**/*.frown", "**/*.frown2"]
 build = "src/build/build.rs"
 edition = "2018"
 
@@ -16,8 +16,8 @@ members = ["api", "chain", "config", "core", "keychain", "p2p", "servers", "stor
 exclude = ["etc/gen_gen"]
 
 [[bin]]
-name = "grin"
-path = "src/bin/grin.rs"
+name = "frown"
+path = "src/bin/frown.rs"
 
 [dependencies]
 blake2-rfc = "0.2"
@@ -34,14 +34,14 @@ linefeed = "0.5"
 failure = "0.1"
 failure_derive = "0.1"
 
-grin_api = { path = "./api", version = "1.0.3" }
-grin_config = { path = "./config", version = "1.0.3" }
-grin_core = { path = "./core", version = "1.0.3" }
-grin_keychain = { path = "./keychain", version = "1.0.3" }
-grin_p2p = { path = "./p2p", version = "1.0.3" }
-grin_servers = { path = "./servers", version = "1.0.3" }
-grin_util = { path = "./util", version = "1.0.3" }
-grin_wallet = { path = "./wallet", version = "1.0.3" }
+frown_api = { path = "./api", version = "1.0.3" }
+frown_config = { path = "./config", version = "1.0.3" }
+frown_core = { path = "./core", version = "1.0.3" }
+frown_keychain = { path = "./keychain", version = "1.0.3" }
+frown_p2p = { path = "./p2p", version = "1.0.3" }
+frown_servers = { path = "./servers", version = "1.0.3" }
+frown_util = { path = "./util", version = "1.0.3" }
+frown_wallet = { path = "./wallet", version = "1.0.3" }
 
 [target.'cfg(windows)'.dependencies]
 cursive = { version = "0.10.0", default-features = false, features = ["pancurses-backend"] }
@@ -58,5 +58,5 @@ flate2 = "1.0"
 tar = "0.4"
 
 [dev-dependencies]
-grin_chain = { path = "./chain", version = "1.0.3" }
-grin_store = { path = "./store", version = "1.0.3" }
+frown_chain = { path = "./chain", version = "1.0.3" }
+frown_store = { path = "./store", version = "1.0.3" }

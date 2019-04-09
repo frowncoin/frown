@@ -14,12 +14,12 @@ RUN set -ex && \
     cmake \
     git
 
-WORKDIR /usr/src/grin
+WORKDIR /usr/src/frown
 
-# Copying Grin
+# Copying Frown
 COPY . .
 
-# Building Grin
+# Building Frown
 RUN cargo build --release
 
 # runtime stage
@@ -33,17 +33,17 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 
 ENV LANG en_US.UTF-8
 
-COPY --from=builder /usr/src/grin/target/release/grin /usr/local/bin/grin
+COPY --from=builder /usr/src/frown/target/release/frown /usr/local/bin/frown
 
-WORKDIR /root/.grin
+WORKDIR /root/.frown
 
-RUN grin server config && \
-    sed -i -e 's/run_tui = true/run_tui = false/' grin-server.toml
+RUN frown server config && \
+    sed -i -e 's/run_tui = true/run_tui = false/' frown-server.toml
 
-VOLUME ["/root/.grin"]
+VOLUME ["/root/.frown"]
 
 EXPOSE 3413 3414 3415 3416
 
-ENTRYPOINT ["grin"]
+ENTRYPOINT ["frown"]
 
 CMD ["server", "run"]

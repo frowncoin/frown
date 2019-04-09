@@ -1,11 +1,11 @@
 [package]
-name = "grin_p2p"
+name = "frown_p2p"
 version = "1.0.3"
-authors = ["Grin Developers <mimblewimble@lists.launchpad.net>"]
-description = "Chain implementation for grin, a simple, private and scalable cryptocurrency implementation based on the MimbleWimble chain format."
+authors = ["Frown Developers <mimblewimble@lists.launchpad.net>"]
+description = "Chain implementation for frown, a simple, private and scalable cryptocurrency implementation based on the MimbleWimble chain format."
 license = "Apache-2.0"
-repository = "https://github.com/mimblewimble/grin"
-keywords = [ "crypto", "grin", "mimblewimble" ]
+repository = "https://github.com/mimblewimble/frown"
+keywords = [ "crypto", "frown", "mimblewimble" ]
 workspace = ".."
 edition = "2018"
 
@@ -22,10 +22,10 @@ serde_derive = "1"
 log = "0.4"
 chrono = { version = "0.4.4", features = ["serde"] }
 
-grin_core = { path = "../core", version = "1.0.3" }
-grin_store = { path = "../store", version = "1.0.3" }
-grin_chain = { path = "../chain", version = "1.0.3" }
-grin_util = { path = "../util", version = "1.0.3" }
+frown_core = { path = "../core", version = "1.0.3" }
+frown_store = { path = "../store", version = "1.0.3" }
+frown_chain = { path = "../chain", version = "1.0.3" }
+frown_util = { path = "../util", version = "1.0.3" }
 
 [dev-dependencies]
-grin_pool = { path = "../pool", version = "1.0.3" }
+frown_pool = { path = "../pool", version = "1.0.3" }

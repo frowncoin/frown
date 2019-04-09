@@ -1,9 +1,9 @@
 # Run `nix-shell` to be able
-# to build Grin on NixOS.
+# to build Frown on NixOS.
 { pkgs ? import <nixpkgs> {} }:
 
 pkgs.stdenv.mkDerivation {
-  name = "grin";
+  name = "frown";
 
   buildInputs = with pkgs; [
     ncurses cmake clang

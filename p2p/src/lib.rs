@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,9 +28,9 @@ extern crate enum_primitive;
 use lmdb_zero as lmdb;
 
 #[macro_use]
-extern crate grin_core as core;
-use grin_chain as chain;
-use grin_util as util;
+extern crate frown_core as core;
+use frown_chain as chain;
+use frown_util as util;
 
 #[macro_use]
 extern crate serde_derive;

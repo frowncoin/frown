@@ -1,4 +1,4 @@
-// Copyright 2018 The Grin Developers
+// Copyright 2018 The Frown Developers
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//! Main crate putting together all the other crates that compose Grin into a
+//! Main crate putting together all the other crates that compose Frown into a
 //! binary.
 
 #![deny(non_upper_case_globals)]
@@ -26,22 +26,22 @@ extern crate serde_derive;
 #[macro_use]
 extern crate log;
 
-use grin_api as api;
-use grin_chain as chain;
-use grin_core as core;
-use grin_keychain as keychain;
-use grin_p2p as p2p;
-use grin_pool as pool;
-use grin_store as store;
-use grin_util as util;
-use grin_wallet as wallet;
+use frown_api as api;
+use frown_chain as chain;
+use frown_core as core;
+use frown_keychain as keychain;
+use frown_p2p as p2p;
+use frown_pool as pool;
+use frown_store as store;
+use frown_util as util;
+use frown_wallet as wallet;
 
 pub mod common;
-mod grin;
+mod frown;
 mod mining;
 mod webwallet;
 
 pub use crate::common::stats::{DiffBlock, PeerStats, ServerStats, StratumStats, WorkerStats};
 pub use crate::common::types::{ServerConfig, StratumServerConfig};
-pub use crate::grin::server::Server;
+pub use crate::frown::server::Server;
 pub use crate::webwallet::server::start_webwallet_server;
